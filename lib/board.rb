@@ -48,15 +48,11 @@ class Board
   end
   
   def valid_move?(input)
-    if input !~ /\D/
-      if input.to_i.between?(0,8) && !taken?(input) 
+      if input.to_i.between?(1,9) && !taken?(input) 
         true
       else
         false
       end
-    else
-      false
-    end
   end
   
   def update(input, player)
